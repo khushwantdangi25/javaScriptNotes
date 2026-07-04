@@ -1,0 +1,11 @@
+Loops:
+---> any  kind of work if we want to do in iterative way we use Loop
+type of loop :
+1 for 
+2 while 
+3 do-while
+
+
+**************************************************************************************************************************************
+Function :
+

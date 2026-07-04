@@ -1,0 +1,72 @@
+Sarching and Extracting Methods in array:
+Category	Array Methods
+
+Searching Methods
+find(),
+findIndex(),
+filter(),
+indexOf(),
+lastIndexOf(),
+includes()
+
+Extracting Methods
+slice(), 
+splice(),
+at(), 
+concat()
+
+
+1 includes() = it just check the element is present in the array or not (true / false);
+2 indexOf() = it return the 1 st accurence of the element if not present then return -1;
+                 it travel in the array in {"right to left"} direction;
+3 lastIndexOf() = it return the last accurance of the element if not  present then -1;
+                  it travel in the array in {"left to right"} direction;
+
+4 at() =  return the element of the specific index or it support the -ve value also;
+
+5 slice() =  method is used to extract a portion of an array without changing the original array.
+              array.slice(start, end)
+              start = inclusive;
+              end = exclusive;
+              ex = nums =  [1,2,3,45,5,6];
+              nums.slice(0,4) = it print only 0 to 3;
+              slice it accept -ve value;
+
+6 splice() = The splice() method is used to add, remove, or replace elements in an array. 
+             It modifies the original
+             Example :- 
+
+             let nums = [1,2,3,4,65,6];
+
+             nums.splice(startIndex , deleteCount , itemstoAdd ,.....);
+             
+             nums.splice(1,4 , 3,0,0,0);
+
+             console.log(nums);//[ 1, 3, 0, 0, 0, 6 ]
+
+             for adding element at index;
+             nums.splice(0,0,5);
+             console.log(nums);//[ 5,  1, 2, 3, 4, 65, 6]
+
+             nums.splice(0,1,5);
+             console.log(nums);//[ 5, 2, 3, 4, 65, 6 ]
+                   
+            nums.splice(0,1,5 , 10 ,20);
+            console.log(nums);// [ 5, 10, 20, 2, 3,  4, 65, 6 ]
+
+
+*****************************************************************************************************************************************
+for loop   =  for searching and dsa algo ;
+while loop = when you don't now the condition;
+dowhile    =  At the place of input validation ;
+for of     = when we use Api thing for normal thing
+for in     = we mostiley use for objects;
+forEach    = for display data and update in dom; 
+
+         
+For Each loop in JavaScript:
+
+--> in JavaScript forEach loop is use in to traverse in the arry
+-->he forEach() method is used to execute a function once for each element in an array. 
+   It does not return a new array.
+--> forEach method execute an callback method for each element of array 

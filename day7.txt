@@ -1,0 +1,94 @@
+HOF ( higher order function ) :- it is a function that takes another function as an 
+                                 argument or returns another function
+
+ 
+  Example :- function greet(name){
+     return function greets(){
+        consol.log(`hello ${name}`);
+     }
+    
+  } 
+
+let a = greet("khush");
+a();                        
+
+
+function validation(a, b, callback) {
+  if (typeof (a) === "number" && typeof (b) === "number") {
+    callback(a,b);
+  } else {
+    console.log("Invalid");
+  }
+}
+
+function add(a, b) {
+  console.log(a + b);
+}
+function sub(a, b) {
+  console.log(a + b);
+}
+function mul(a, b) {
+  console.log(a * b);
+}
+function div(a, b) {
+  if (b > 0) {
+    console.log(a / b);
+  } else {
+    console.log("Invalid input");
+  }
+}
+validation(10, 12, add);
+validation(10, 2, sub);
+validation(101, 2, mul);
+validation(14, 1, div);
+
+
+function greet( name , callback){
+ console.log(`good morning  ${ name ,callback()}`);
+}
+function by(){
+     return "bye"
+}
+function welcome(){
+     return "welcome sir"
+     
+}
+greet("khush" , by);
+greet("khush" , welcome);
+
+
+**********************************************************************************************************************************************************
+map = change the data from the array   and filter choose the data * map and filter create new array;
+
+    Working of map function : 
+
+
+      let crr = [1,2,5];
+function Map(arr, callback){
+     let newArray = [];
+     for(let  i = 0  ; i < arr.length; i++){
+          let r = callback(arr[i]);
+          newArray.push(r);
+     }
+     return newArray;
+}
+const k = Map(crr , function(num){
+          return num*2;
+})
+console.log(k);
+
+
+Parameters :
+Default = function add (a, b=0);
+Rest = function j(a, ...b) {
+       console.log(a , b);
+        }
+          j(1,2,3,4,5,5,);
+ int rest we use sprade operator ;
+ *** we only pass only one rest Parameter to over function;
+ 
+
+
+--------------------------------------------------------------------
+
+Closure :- 

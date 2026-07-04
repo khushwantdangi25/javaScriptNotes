@@ -1,0 +1,195 @@
+
+hzg-anwp-wai
+Stack or Heap memory:
+
+📦 Stack Memory = Small & Fast
+Stores primitive values.
+Each variable gets its own copy.
+When a function finishes, its stack memory is automatically cleared.
+
+Examples of primitive values:
+
+Number
+String
+Boolean
+null
+undefined
+BigInt
+Symbol
+let a = 10;
+let b = a;
+
+b = 20;
+
+console.log(a); // 10
+console.log(b); // 20
+
+Why?
+
+b gets a copy of a.
+Changing b does not affect a.
+🏠 Heap Memory = Large & Shared
+Stores objects and reference types.
+Variables store the address (reference) of the object, not the object itself.
+Multiple variables can point to the same object.
+
+Examples:
+
+Object
+Array
+Function
+Date
+Map
+Set
+let user1 = {
+  name: "John"
+};
+
+let user2 = user1;
+
+user2.name = "Mike";
+
+console.log(user1.name); // Mike
+console.log(user2.name); // Mike
+
+Why?
+
+Both user1 and user2 point to the same object in heap memory.
+Changing it through one variable changes what the other sees.
+Easy Trick to Remember
+Stack = 📄 Photocopy
+
+You get your own copy.
+
+let x = 5;
+let y = x;
+
+Changing y doesn't change x.
+
+Heap = 🔑 House Key
+
+Two people have keys to the same house.
+
+let obj1 = { city: "Delhi" };
+let obj2 = obj1;
+
+Changing the house through one key affects what the other key sees.
+
+Quick Comparison
+Stack Memory	Heap Memory
+Stores primitives	Stores objects, arrays, functions
+Copy of value	Reference (address)
+Fast	Slightly slower
+Independent variables	Shared object
+Changes don't affect original	Changes affect all references
+One-line interview answer
+
+Primitive data types are copied by value (like a photocopy), while objects, arrays, and functions are stored in heap memory and variables hold references (addresses) to them, so multiple variables can refer to the same object.
+
+Note: This is a simplified mental model that's useful for learning. JavaScript engines manage memory internally, and the exact implementation details may vary, but this explains the behavior you'll observe in code.
+
+
+*****************************************************************************************************************************************************************************************************************************************************
+Js String
+
+--> ways to create String in js
+
+
+1 create using literals "" , '' ,
+
+2 create using constructor :=
+  let str = new String("abc");
+  cl(str); // abc
+  but it is not consider for creating the string;
+
+3 template literals(String interpolation) :- `${"here we can pass the string"}`
+
+Methods of String:
+
+let str = "kHUSH";
+
+1 length = str.length(); // 5 
+
+2 concate = +
+
+3 escape charcter = \ 'parul\' // 'parul'
+
+4 charAt(index) = str.charAt(0) // k
+
+5 indexOf() = str.indexOf("H"); // 1
+
+6 substring(start , end) = str.substring(0 , 4) // its give 0 to 3 index character;
+--> we can't use negative number in substring();
+
+--> but we can use negative number in slice;
+7 slice() = 
+
+8 toUpperCase()
+
+9 toLowerCase()
+
+important:
+substring() = if my start = 0 ans end = 0;
+then it gives use empty String;
+
+
+10 trim() = str.trim() // it removes the space from front and last
+
+11 replace() = str.replace("K" , "k");
+
+12 includes() = it tells that character is in the string or not
+
+13 split() = ste.split("");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Method	What it does	Example
+
+length	Returns string length	"Hello".length → 5
+
+toUpperCase()	Converts to uppercase	"hello".toUpperCase() → "HELLO"
+
+toLowerCase()	Converts to lowercase	"HELLO".toLowerCase() → "hello"
+
+trim()	Removes spaces from both ends	" hello ".trim() → "hello"
+
+includes()	Checks if text exists	"JavaScript".includes("Script") → true
+
+startsWith()	Checks starting text	"Hello".startsWith("He") → true
+
+endsWith()	Checks ending text	"Hello".endsWith("lo") → true
+
+indexOf()	Finds first index	"Hello".indexOf("l") → 2
+
+lastIndexOf()	Finds last index	"Hello".lastIndexOf("l") → 3
+
+charAt()	Gets character at index	"Hello".charAt(1) → "e"
+
+at()	Gets character (supports negative indexes)	"Hello".at(-1) → "o"
+
+slice()	Extracts part of string	"JavaScript".slice(4,10) → "Script"
+
+substring()	Extracts characters (no negative indexes)	"Hello".substring(1,4) → "ell"
+
+replace()	Replaces first match	"Hi John".replace("John","Sam") → "Hi Sam"
+
+replaceAll()	Replaces all matches	"a-a-a".replaceAll("a","b") → "b-b-b"
+
+split()	Converts string to array	"a,b,c".split(",") → ["a","b","c"]
+
+concat()	Joins strings	"Hello".concat(" World") → "Hello World"
+
+repeat()	Repeats string	"Hi".repeat(3) → "HiHiHi"
+

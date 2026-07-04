@@ -1,0 +1,128 @@
+we use javaScript to add functnality to our website ans make it dynamic;
+use case :
+1 intrractive 
+2 dom manipulation
+
+history of javaScript
+
+in 1995 -> Brendan eich 
+time duration -> 10days
+javaScript name was in 1995 is Mocha -> liveScript -> javaScript
+
+in 1997 Ecma Script standrized js
+
+crome -> v8engine
+safari -> javaScript core
+firefox -> 
+
+in 2009 they make nodeJs so you also make the backend from it
+from js we can create :
+website -> frontend , backend
+application,
+api,
+games,
+and many more
+so its very important to learn this language
+
+***************************************************************************************************************************************
+
+Variables In javaScript
+
+
+---> Variables are containers used to store data temporarily while a program is running.
+---> three type to declare variable :
+     1 var , 2 let , 3 const
+
+1 var :
+--> we can re decliar the var that's why we avoid the var 
+--> example =
+   var a = 24; //
+   var a = 35; // RE declare of a and that is harmful
+   that why we use let and const of ES6;
+
+2 let :
+-->let is the varible which is not redecalered 
+   and its give error to use if we re declare it 
+   so let is the varible we mostely use
+   example :
+    let a = 10;
+    console.log(a) // right
+    let a = 15;
+    console.log(a)// error : variable arlready defined
+
+3 const :
+--> its a varible which is use to contain constent variable which are not changed in future
+ example  : PI = 3.146 
+
+ *************************************************************************************************************************************
+
+ Naming of the Varible :
+
+
+ * first charcter of the varible is (_ , $ , a to z , A  to Z )
+    Example like = _num , $num , Num , Amount
+
+    12num = gives error : Invalid or unexcepted token 
+    _12num = right it is valid name of a varible 
+
+
+**************************************************************************************************************************************************
+Scope in javaScript:
+
+
+three type of scope in javaScript
+1 globle 
+2 block
+3 functional
+
+1 globle --> throught out the program this variable can be used by any function in the program 
+
+  example -  let a = 10; // in global scope
+             function add(){
+                let b = 14;
+                console.log(a+b);
+             }
+
+2 block --> in this scope only let and const obey this scope this variable cannot use outside of the block
+           example -> {
+                        let a = 19 ;
+                        const b  100;
+                        var c = 20;
+                        console.log(a+b+c);
+                       }
+                        console.log(a+b);// RefrenceError : not defined 
+                        console.log(c)// print 20 because var don't obey the block scope;
+
+
+3 function scope --> all varibles are abey the let const and var this variables only use in the functional scope
+
+            example = function add(){
+                let a = 10;
+                var b = 10;
+                const c = 10;
+                console.log(a+b+c);
+            }
+             console.log(a+b+c); RefrenceError : varible is not defined;
+
+
+*******************************************************************************************************************************************************
+Hosting in javaScript 
+
+---> Hoisting in JavaScript is the behavior where declarations of variables
+     and functions are moved to the top of their scope during the compilation phase, 
+     before the code is executed.
+
+     Hoisting means JavaScript reads your code first and remembers where variables
+      and functions are declared before it starts running the code.
+    Think of it like this:
+     JavaScript first scans the whole file, then executes it line by line.
+
+     (jab humne koi var se varible declare karte hai or usse phele hi hum usko access karte hai to vo error nhi deta hai bas undefined bta ta hai
+     isko hum hoisting khte hai yhi let or const me nhi hoti 
+     )
+
+
+       var a;          // Declaration is hoisted
+      console.log(a); // undefined
+       a = 10;         // Initialization stays here
+      console.log(a); // 10

@@ -1,0 +1,47 @@
+Data Type in javaScript:
+--> what kind of value a variable can store like number , string ;
+types of data type :
+
+1 primitve 
+2 non primitive
+
+1 primitve --> Primitive data types store a single,immutable value.
+                When you assign or copy a primitive, the actual value 
+                is copied.
+  primitive  type :
+   --> Number =  like 1, 2.3, 10000;
+   --> boolean = 0 = false , 1 = true, or true , false
+   --> String =  "abs" , 'A' both consider in String;
+   --> null = no value ;
+   --> undefined = if varible is declared but not Initialize at that time variable show undefined
+   --> bigInt = for big number value
+   --> symbol = when ever we want a unique identity we can use symbol;
+for checking the type of datatype variable hold we can use typeOf()
+   
+
+2 non-primitive --> Non-primitive data types store collections of values or more complex entities.
+                   Variables hold a reference (memory address) to the object rather than the object
+                    itself.
+
+    non-primitive type :
+    -->
+
+
+
+**************************************************************************************************************************************************************
+
+
+Operators :
+8
+Operator Type	Operators	Example
+Arithmetic	+, -, *, /, %, **, ++, --	10 + 5 // 15
+Assignment	=, +=, -=, *=, /=, %=, **=	x += 5
+Comparison	==, ===, !=, !==, >, <, >=, <=	5 === "5" // false
+Logical	&&, `	
+Bitwise	&, `	, ^, ~, <<, >>, >>>`
+Ternary	condition ? value1 : value2	age >= 18 ? "Adult" : "Minor"
+String	+, +=	"Hello " + "World"
+Type	typeof, instanceof	typeof "Hello" // "string"
+Nullish	??	name ?? "Guest"
+Optional Chaining	?.	user?.name
+Spread/Rest	...	const arr2 = [...arr1]

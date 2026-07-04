@@ -1,0 +1,18 @@
+Async javaScript
+Shreyansh Sahu
+10:20
+Q1. Print numbers from 1 to 10 using a for loop.
+
+Q2. Print numbers from 10 to 1 using a while loop.
+
+Q3. Print even numbers from 1 to 20 using a for loop.
+
+Q4. Print odd numbers from 1 to 15 using a while loop.
+
+Q5. Print the multiplication table of 5 (i.e., 5 × 1 = 5 ... 5 × 10 = 50).
+
+Q6. Find the sum of numbers from 1 to 100 using a loop.
+
+Q7. Print all numbers between 1 to 50 that are divisible by 3.
+
+Q8. Ask the user for a number and print whether each number from 1 to that number is odd or even.

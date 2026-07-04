@@ -1,0 +1,300 @@
+JavaScript Numbers :
+-->In JavaScript, Number is the built-in numeric type used for both integers and floating-point values.
+let a = 1;
+let b = 1.4;
+let c = -8;
+
+using number constructor
+
+let num = new Number(8);
+
+ Some common Method:
+
+let num = 12.3456;
+
+num.toFixed(2);      // "12.35"
+num.toPrecision(4);  // "12.35"
+num.toString();      // "12.3456"
+
+Default formatting
+let num = 1234567.89;
+console.log(num.toLocaleString());//1,234,567.89
+
+let num = 1234567.89;
+console.log(num.toLocaleString("en-US"));//1,234,567.89
+
+
+Number.MAX_VALUE;
+Number.MIN_VALUE;
+Number.MAX_SAFE_INTEGER;
+Number.MIN_SAFE_INTEGER;
+Number.POSITIVE_INFINITY;
+Number.NEGATIVE_INFINITY;
+Number.NaN;
+
+
+
+Checking numbers
+
+Number.isInteger(10);      // true
+Number.isInteger(10.5);    // false
+
+Number.isNaN(NaN);         // true
+Number.isFinite(100);      // true
+Number.isFinite(Infinity); // false
+
+*************************************************************************************************************************************************
+
+Math function in JavaScript :
+
+Math.round(4.6)     // 5
+Math.floor(4.9)     // 4
+Math.ceil(4.1)      // 5
+Math.trunc(4.9)     // 4
+
+Math.abs(-10)       // 10
+Math.max(10, 20, 5) // 20
+Math.min(10, 20, 5) // 5
+Math.pow(2, 3)      // 8
+2 ** 3              // 8
+
+Math.sqrt(25)       // 5
+Math.cbrt(27)       // 3
+
+Math.random()       // 0.12345... (0 to <1)
+
+Math.floor(Math.random() * 10) + 1
+// Random number from 1 to 10
+
+Math.sign(10)       // 1
+Math.sign(-10)      // -1
+Math.sign(0)        // 0
+
+Math.tan(Math.PI/4) // 1
+
+Math.log(Math.E)    // 1
+Math.log10(100)     // 2
+Math.exp(1)         // 2.718...
+
+Math.PI             // 3.141592653589793
+Math.E              // 2.718281828459045
+
+example:
+
+for(let  i = 0 ; i < 10;  i++ ){
+    let a = Math.floor(Math.random()*10)+1;
+        console.log(a);
+    
+}
+*******************************************************************************************************************************************************************************************************************
+
+Array in JavaScript:
+
+
+An array is a variable that stores multiple values in one place.
+
+we can create arry like :
+let arr = [1,2,34];
+let arr = new Array(1,3,5)
+
+we can add anythin in the array like number , string , object , array inside array NaN 
+EX :
+
+let arr = [1 ,true , "khush" , {name:"kk" , age :34} ,[1,2,3]];
+
+let fruits = ["apple", "banana", "mango"];
+let fruits = ["apple", "banana", "mango"];
+fruits.push("kaju")
+console.log(fruits);
+fruits.pop();
+console.log(fruits);
+fruits.shift();
+console.log(fruits)
+fruits.unshift("kela");
+console.log(fruits)
+
+Array Method:
+push() = always add element in the last of the array;
+pop() = remove from last;
+shift() = remove from front;
+unshift() = add from front;
+
+itetrate in array:
+
+1.with help of for loop:
+for(let i = 0 ; i < fruits.length; i++){
+    console.log(fruits[i]);
+}
+
+2.with for of loop:
+for(let i of fruits){
+    console.log(i);
+}
+
+3.with help of for in :
+for(let i in fruits){
+    console.log(i) // it will give use the index
+}
+differnce between for of and for loop:
+
+In for loop we get index and with the help of the index we Extracts the array
+
+In for of  we get direct value we don't get any value ;
+
+
+
+let fruits = ["apple", "banana", "mabngo" , "kaju"];
+
+// fruits.push("kaju")
+// console.log(fruits);
+// fruits.pop();
+// console.log(fruits);
+// fruits.shift();
+// console.log(fruits)
+// fruits.unshift("kela");
+// console.log(fruits)
+
+let arr =  [1,3,5,7];
+// arr.map((val) =>{
+//     console.log(val*2);
+
+// })
+// console.log(b);
+// let user = [{uname : "khushawant"},{uname:"abhi"},{uname:"divya"}];
+
+// let b = user.filter((val) =>{
+//     return val.uname.includes("a");
+// })
+
+
+// if(b.length ===0){
+//     console.log("Not Found");
+// }
+// else{
+//     b.forEach((val) =>{
+//     console.log(val.uname);
+//     })
+// }
+
+
+// let nums = [1,2,3];
+// const brr = nums.map((x) => {
+//     if(x%2 == 0){
+//         return x;
+//     }
+//     else{
+//         return  x-x;
+//     }
+  
+// });
+
+// const reu = nums.reduce((acc , val) =>{
+//     return val += acc;
+// })
+// console.log(`This is array elements : ${reu} `);
+
+
+****************************************************************************************************************************************************************************
+
+Type Conversion in JavaScript
+
+Type conversion is the process of converting a value from one data type to another.
+
+JavaScript supports two types of conversions:
+
+Implicit Type Conversion (Type Coercion) – done automatically by JavaScript.
+Explicit Type Conversion (Type Casting) – done manually by the programmer.
+1. Implicit Type Conversion (Coercion)
+
+JavaScript automatically converts values when performing operations.
+
+String Conversion
+let result = "5" + 2;
+console.log(result); // "52"
+
+2 is converted to a string and concatenated.
+
+Number Conversion
+let result = "5" - 2;
+console.log(result); // 3
+
+"5" is converted to a number.
+
+Boolean Conversion
+if (1) {
+  console.log("True");
+}
+
+1 is converted to true.
+
+2. Explicit Type Conversion (Type Casting)
+Convert to Number
+
+Using Number()
+
+let str = "123";
+let num = Number(str);
+
+console.log(num);       // 123
+console.log(typeof num); // number
+
+Other methods:
+
+parseInt("123");      // 123
+parseFloat("12.34");  // 12.34
++"123";               // 123 (Unary plus)
+Convert to String
+
+Using String()
+
+let num = 123;
+let str = String(num);
+
+console.log(str);        // "123"
+console.log(typeof str); // string
+
+Other methods:
+
+(123).toString(); // "123"
+123 + "";         // "123"
+Convert to Boolean
+
+Using Boolean()
+
+Boolean(1);      // true
+Boolean(0);      // false
+Boolean("");     // false
+Boolean("Hello");// true
+Truthy and Falsy Values
+Falsy Values
+false
+0
+-0
+0n
+""
+null
+undefined
+NaN
+
+Everything else is truthy.
+
+Examples:
+
+Boolean("JavaScript"); // true
+Boolean([]);           // true
+Boolean({});           // true
+Examples
+console.log(Number("100")); // 100
+console.log(String(true));  // "true"
+console.log(Boolean(0));    // false
+
+console.log("10" + 5); // "105"
+console.log("10" - 5); // 5
+console.log("10" * 5); // 
+
+Number() = converts the entire String if there is any alphabet  it gives NaN but parseInt() will give the integer from them
+like : let str = "100km";
+let a = Number("100km") == NaN;
+let b = parseInt("100km")  = 100;
+
+
