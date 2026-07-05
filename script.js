@@ -248,9 +248,86 @@
 // })
 // console.log(k);
 
-function j(a, ...b) {
-  console.log(a , b);
+// function j(a, ...b) {
+//   console.log(a , b);
   
-}
-j(1,2,3,4,5,5,);
+// }
+// j(1,2,3,4,5,5,);
 
+
+const orders = [
+  {
+    id: 1,
+    customer: "Rahul",
+    food: "Pizza",
+    price: 500,
+    delivered: true
+  },
+  {
+    id: 2,
+    customer: "Aman",
+    food: "Burger",
+    price: 250,
+    delivered: false
+  },
+  {
+    id: 3,
+    customer: "Priya",
+    food: "Pasta",
+    price: 400,
+    delivered: true
+  },
+  {
+    id: 4,
+    customer: "Riya",
+    food: "Momos",
+    price: 150,
+    delivered: false
+  }
+];
+
+// fatch the user name
+
+const users = orders.map((u) =>{
+  return u.customer;
+})
+
+// console.log(users);
+
+// fatch customer or  food or price
+
+const cust = orders.map((u) =>{
+  return {name : u.customer , order : u.food , price : u.price}
+})
+// console.log(cust);
+
+// filter the order price less than 200;
+
+const fit = orders.filter((u) =>{
+  if(u.price <= 300){
+    return u;
+  }
+})
+console.log(fit);
+fit.map((u) =>{
+  // console.log(u.customer);
+})
+
+// filter the array  whose food is delivered 
+
+const red = orders.filter((val) =>{
+  if(val. delivered){
+    return val;
+  }
+
+})
+// console.log(red);
+
+
+// count the number of orders delivered
+
+const pen = orders.reduce((count , order) =>{
+   return  order.delivered ? count + 1 : count;
+},0)
+
+console.log(pen);
