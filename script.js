@@ -292,14 +292,14 @@ const users = orders.map((u) =>{
   return u.customer;
 })
 
-// console.log(users);
+console.log(users);
 
 // fatch customer or  food or price
 
 const cust = orders.map((u) =>{
   return {name : u.customer , order : u.food , price : u.price}
 })
-// console.log(cust);
+console.log(cust);
 
 // filter the order price less than 200;
 
@@ -310,10 +310,10 @@ const fit = orders.filter((u) =>{
 })
 console.log(fit);
 fit.map((u) =>{
-  // console.log(u.customer);
+  console.log(u.customer);
 })
 
-// filter the array  whose food is delivered 
+//filter the array  whose food is delivered 
 
 const red = orders.filter((val) =>{
   if(val. delivered){
@@ -321,7 +321,7 @@ const red = orders.filter((val) =>{
   }
 
 })
-// console.log(red);
+console.log(red);
 
 
 // count the number of orders delivered
@@ -331,3 +331,34 @@ const pen = orders.reduce((count , order) =>{
 },0)
 
 console.log(pen);
+
+
+const arr = [1,2,3,5,6,8];
+ const brr = arr.filter((u) =>{
+  if(u % 2 != 0){
+    return u;
+  }
+})
+console.log(brr);
+
+
+const crr = orders.reduce((total , pr) =>{
+  return total += pr.price;
+},0)
+
+console.log(crr);
+let res1 = [];
+for(let i = 0 ; i < arr.length; i++){
+    if(arr[i] % 2  === 0){
+      res1.push(arr[i]);
+    }
+}
+
+let res3 = orders.sort((a,b) => a.price - b.price);
+
+res3.map((u) => {
+    console.log();
+    
+    console.log(u.price);
+})
+// console.log(res3);
