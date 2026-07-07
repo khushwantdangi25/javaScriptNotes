@@ -1,0 +1,89 @@
+Object in JavaScript :
+(line : 377)
+  An object is the collection of related data stored in the for of key value pair 
+  its a non-primitive data type Objects are mutable , so we can add new properties at any time
+  like :- {
+           KEY : VALUE;
+          }
+
+   value can be duplicate but key must be unique;
+
+   to access the data we have to method
+    
+1 Dot(.) notation:
+  
+  let s = {
+    name : "khush",
+    id : 12,
+  }
+  consol.log(s.name); // khush
+
+2 Bracket ([]) notation
+
+  let s = {
+    name : "khush",
+    id : 12,
+  }
+  console.log(s["name"]) // khush;
+
+imp = if we have to name key like full name then to access it we use bracket notation
+      and keep key in string format
+
+      let s = {
+        "full name" : "khush",
+        id : 12,
+      }
+
+      consol.log(s.full name)// error
+      consol.log(s["full name"]) // khush
+
+
+==> dot notation is use to access the static keys like id , age , username , address 
+==> bracket notation is used when you create dynamic key
+  n JavaScript, a dynamic key means using a variable or expression as the name of an object
+  property instead of writing the property name directly.
+
+1. Using computed property names (recommended)
+const key = "name";
+
+const person = {
+  [key]: "Alice"
+};
+
+console.log(person);
+// { name: "Alice" }
+
+The square brackets [] tell JavaScript to evaluate the expression and use 
+its value as the property name.
+
+
+We can add new properties in over object 
+
+let s = {
+    name : "k",
+    id : 12,
+}
+s.address = "limbda";
+consol.log(s); // {name : "k" , id : 12 , address : "linbda"};
+
+
+let s = {
+    name : "k",
+    id : 12,
+}
+s.address = "limbda";
+s["k"] = "kk";
+console.log(s); //{ name: 'k', id: 12, address: 'limbda', k: 'kk' }
+
+
+DELETE THE element :
+
+let s = {
+    n : "k",
+    age : 12,
+    id : 123,
+}
+
+delete s.age // age will delete;
+{ n: 'k', age: 12, id: 123 }
+{ n: 'k', id: 123 }

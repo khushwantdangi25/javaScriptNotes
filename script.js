@@ -255,110 +255,210 @@
 // j(1,2,3,4,5,5,);
 
 
-const orders = [
-  {
-    id: 1,
-    customer: "Rahul",
-    food: "Pizza",
-    price: 500,
-    delivered: true
-  },
-  {
-    id: 2,
-    customer: "Aman",
-    food: "Burger",
-    price: 250,
-    delivered: false
-  },
-  {
-    id: 3,
-    customer: "Priya",
-    food: "Pasta",
-    price: 400,
-    delivered: true
-  },
-  {
-    id: 4,
-    customer: "Riya",
-    food: "Momos",
-    price: 150,
-    delivered: false
-  }
-];
+// const orders = [
+//   {
+//     id: 1,
+//     customer: "Rahul",
+//     food: "Pizza",
+//     price: 500,
+//     delivered: true
+//   },
+//   {
+//     id: 2,
+//     customer: "Aman",
+//     food: "Burger",
+//     price: 250,
+//     delivered: false
+//   },
+//   {
+//     id: 3,
+//     customer: "Priya",
+//     food: "Pasta",
+//     price: 400,
+//     delivered: true
+//   },
+//   {
+//     id: 4,
+//     customer: "Riya",
+//     food: "Momos",
+//     price: 150,
+//     delivered: false
+//   }
+// ];
 
-// fatch the user name
+// // fatch the user name
 
-const users = orders.map((u) =>{
-  return u.customer;
-})
+// const users = orders.map((u) =>{
+//   return u.customer;
+// })
 
-console.log(users);
+// console.log(users);
 
-// fatch customer or  food or price
+// // fatch customer or  food or price
 
-const cust = orders.map((u) =>{
-  return {name : u.customer , order : u.food , price : u.price}
-})
-console.log(cust);
+// const cust = orders.map((u) =>{
+//   return {name : u.customer , order : u.food , price : u.price}
+// })
+// console.log(cust);
 
-// filter the order price less than 200;
+// // filter the order price less than 200;
 
-const fit = orders.filter((u) =>{
-  if(u.price <= 300){
-    return u;
-  }
-})
-console.log(fit);
-fit.map((u) =>{
-  console.log(u.customer);
-})
+// const fit = orders.filter((u) =>{
+//   if(u.price <= 300){
+//     return u;
+//   }
+// })
+// console.log(fit);
+// fit.map((u) =>{
+//   console.log(u.customer);
+// })
 
-//filter the array  whose food is delivered 
+// //filter the array  whose food is delivered 
 
-const red = orders.filter((val) =>{
-  if(val. delivered){
-    return val;
-  }
+// const red = orders.filter((val) =>{
+//   if(val. delivered){
+//     return val;
+//   }
 
-})
-console.log(red);
-
-
-// count the number of orders delivered
-
-const pen = orders.reduce((count , order) =>{
-   return  order.delivered ? count + 1 : count;
-},0)
-
-console.log(pen);
+// })
+// console.log(red);
 
 
-const arr = [1,2,3,5,6,8];
- const brr = arr.filter((u) =>{
-  if(u % 2 != 0){
-    return u;
-  }
-})
-console.log(brr);
+// // count the number of orders delivered
+
+// const pen = orders.reduce((count , order) =>{
+//    return  order.delivered ? count + 1 : count;
+// },0)
+
+// console.log(pen);
 
 
-const crr = orders.reduce((total , pr) =>{
-  return total += pr.price;
-},0)
+// const arr = [1,2,3,5,6,8];
+//  const brr = arr.filter((u) =>{
+//   if(u % 2 != 0){
+//     return u;
+//   }
+// })
+// console.log(brr);
 
-console.log(crr);
-let res1 = [];
-for(let i = 0 ; i < arr.length; i++){
-    if(arr[i] % 2  === 0){
-      res1.push(arr[i]);
-    }
-}
 
-let res3 = orders.sort((a,b) => a.price - b.price);
+// const crr = orders.reduce((total , pr) =>{
+//   return total += pr.price;
+// },0)
 
-res3.map((u) => {
-    console.log();
+// console.log(crr);
+// let res1 = [];
+// for(let i = 0 ; i < arr.length; i++){
+//     if(arr[i] % 2  === 0){
+//       res1.push(arr[i]);
+//     }
+// }
+
+// let res3 = orders.sort((a,b) => a.price - b.price);
+
+// res3.map((u) => {
+//     console.log();
     
-    console.log(u.price);
-})
+//     console.log(u.price);
+// })
 // console.log(res3);
+
+// function print(n , i =0){
+//   if(n === 0) return;
+
+//   console.log(i);
+//   print(n-1);
+//   i++;
+  
+// }
+// print(10 , 1);
+
+// *******************************************************************************************************************************************************
+// objects
+
+// function input(name , id ){
+//    return [{
+//   name : name,
+//   id : id
+// }]
+// }
+
+// let s = input("khushwant" , 32);
+// console.log(s);
+
+
+      // let s = {
+      //   "full name" : "khush",
+      //   id : 12,
+      // }
+
+      // // consol.log(s.full name)// error
+      // console.log(s["full name"]) // khush
+
+
+// let s = {
+//     name : "k",
+//     id : 12,
+// }
+// s.address = "limbda";
+// s["k"] = "kk";
+// console.log(s); //{ name: 'k', id: 12, address: 'limbda', k: 'kk' }
+
+
+// let s = {
+//     n : "k",
+//     age : 12,
+//     id : 123,
+// }
+// console.log(s);
+
+// delete s.age 
+// console.log(s);
+
+// const car = {
+//   name : "Camry",
+//   company : "Toyota",
+//   model : 2025,
+//   rate : 300000,
+// }
+
+// console.log(car);
+// // add data
+// car.m = 20
+// console.log(car);
+// // delete data
+// delete car.m;
+// console.log(car);
+// // access using bracket [];
+
+// console.log(car["name"]);
+//  // dynamic value 
+
+//  let k = "company";
+//  console.log(car[k]);
+ 
+
+
+// let arr = [];
+// function input(obj){
+//     return arr.push(obj);
+// }
+// input({name : "k"});
+// input({name : "e"});
+// input({name : "h"});
+// input({name : "l"});
+// input({name : "o"});
+// arr.map((u) =>{
+//  console.log(u.name);
+ 
+// })
+
+// const inp = document.querySelector("input");
+// console.log(inp.value);
+
+let obj = {
+  for:"kk",
+  let : 12,
+
+}
+console.log(obj.let);
