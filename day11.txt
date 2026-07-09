@@ -1,0 +1,330 @@
+he Spread (...) and Rest (...) operators use the same syntax (...), but they do different jobs depending on where they're used.
+
+Easy way to remember
+Spread = Expands (opens/unpacks values)
+Rest = Collects (packs values together)
+1. Spread Operator (...)
+
+Purpose: Expands an array or object into individual elements.
+
+Example 1: Copy an array
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1];
+
+console.log(arr2); // [1, 2, 3]
+
+Use case: Create a copy without changing the original array.
+
+Example 2: Merge arrays
+const fruits = ["Apple", "Banana"];
+const vegetables = ["Carrot", "Potato"];
+
+const food = [...fruits, ...vegetables];
+
+console.log(food);
+// ["Apple", "Banana", "Carrot", "Potato"]
+
+Use case: Combine multiple arrays.
+
+Example 3: Copy and update an object
+const user = {
+  name: "John",
+  age: 25
+};
+
+const updatedUser = {
+  ...user,
+  age: 26
+};
+
+console.log(updatedUser);
+// { name: "John", age: 26 }
+
+Use case: Update React state or objects without modifying the original.
+
+2. Rest Operator (...)
+
+Purpose: Collects multiple values into one array or object.
+
+Example 1: Function parameters
+function add(...numbers) {
+  return numbers.reduce((sum, num) => sum + num, 0);
+}
+
+console.log(add(1, 2, 3, 4));
+// 10
+
+Here,
+
+add(1, 2, 3, 4);
+
+becomes
+
+numbers = [1, 2, 3, 4];
+
+Use case: Accept any number of arguments.
+
+Example 2: Array destructuring
+const numbers = [10, 20, 30, 40];
+
+const [first, ...rest] = numbers;
+
+console.log(first); // 10
+console.log(rest);  // [20, 30, 40]
+
+Use case: Get the remaining elements after extracting some.
+
+Example 3: Object destructuring
+const user = {
+  name: "John",
+  age: 25,
+  city: "Delhi"
+};
+
+const { name, ...others } = user;
+
+console.log(name);   // John
+console.log(others); // { age: 25, city: "Delhi" }
+
+Use case: Separate one or more properties from the rest.
+
+Real-world React examples
+Spread (updating state)
+const [user, setUser] = useState({
+  name: "John",
+  age: 25
+});
+
+setUser({
+  ...user,
+  age: 26
+});
+
+Without spread, you'd overwrite the whole object.
+
+Rest (receiving props)
+function Button({ title, ...props }) {
+  return <button {...props}>{title}</button>;
+}
+
+Usage:
+
+<Button
+  title="Save"
+  className="btn"
+  disabled
+  onClick={handleClick}
+/>
+
+Here:
+
+title = "Save"
+
+props = {
+  className: "btn",
+  disabled: true,
+  onClick: handleClick
+}
+Quick comparison
+Feature	Spread (...)	Rest (...)
+Purpose	Expands values	Collects values
+Meaning	Unpack	Pack
+Used in	Arrays, objects, function calls	Function parameters, destructuring
+Output	Individual values	Array or object of remaining values
+One simple trick to remember
+
+Imagine a bag of balls:
+
+Spread = Empty the bag onto the table.
+const bag = [1, 2, 3];
+
+console.log(...bag);
+
+// Output:
+// 1 2 3
+Rest = Put all loose balls into one bag.
+function collect(...balls) {
+  console.log(balls);
+}
+
+collect(1, 2, 3);
+
+// Output:
+// [1, 2, 3]
+
+Memory trick:
+
+Spread → S = Scatter (expand values)
+Rest → R = Remaining (collect the remaining values)
+
+
+**********************************************************************************************************************************************************
+
+The Nullish Coalescing Operator (??) is used to provide a default value only when the left side is null or undefined.
+
+It's often confused with the logical OR operator (||).
+
+Syntax
+value ?? defaultValue
+
+If value is:
+
+null → returns defaultValue
+undefined → returns defaultValue
+Anything else → returns value
+
+**********************************************************************************************************************************************************
+
+In JavaScript, shallow copy and deep copy are ways to duplicate objects or arrays. The key difference is how nested objects are handled.
+
+1. Shallow Copy
+
+A shallow copy copies only the first level of an object. If the object contains nested objects or arrays, they are copied by reference, not duplicated.
+
+Example
+const person = {
+  name: "John",
+  address: {
+    city: "New York"
+  }
+};
+
+const copy = { ...person }; // Shallow copy
+
+copy.name = "Alice";
+copy.address.city = "Los Angeles";
+
+console.log(person);
+Output
+{
+  name: "John",
+  address: {
+    city: "Los Angeles"
+  }
+}
+
+Notice:
+
+name is copied independently.
+address is shared between both objects.
+Memory Representation
+person
+ ├── name ------> "John"
+ └── address ---+
+                |
+copy            |
+ ├── name ---> "Alice"
+ └── address ---+
+
+Both point to the same address object.
+Ways to Create a Shallow Copy
+Using Spread Operator
+const copy = { ...obj };
+Using Object.assign()
+const copy = Object.assign({}, obj);
+Arrays
+const arr = [1, 2, [3, 4]];
+
+const copy = [...arr];
+
+copy[2][0] = 100;
+
+console.log(arr);
+// [1, 2, [100, 4]]
+2. Deep Copy
+
+A deep copy creates a completely independent copy of the object, including all nested objects and arrays.
+
+Example
+const person = {
+  name: "John",
+  address: {
+    city: "New York"
+  }
+};
+
+const copy = structuredClone(person);
+
+copy.address.city = "Los Angeles";
+
+console.log(person.address.city);
+Output
+New York
+
+The original object remains unchanged.
+
+Memory Representation
+person
+ └── address ---> Object A
+
+copy
+ └── address ---> Object B
+
+Different objects are created.
+
+Ways to Create a Deep Copy
+1. structuredClone() (Recommended)
+const deepCopy = structuredClone(original);
+
+Works for:
+
+Objects
+Arrays
+Maps
+Sets
+Dates
+Circular references
+
+Example:
+
+const obj = {
+  name: "John",
+  skills: ["JS", "React"]
+};
+
+const copy = structuredClone(obj);
+
+copy.skills.push("Node");
+
+console.log(obj.skills);
+// ["JS", "React"]
+2. JSON Method (Limitations)
+const copy = JSON.parse(JSON.stringify(obj));
+
+Works for simple objects only.
+
+Doesn't copy correctly:
+const obj = {
+  date: new Date(),
+  func: () => {},
+  undef: undefined
+};
+
+const copy = JSON.parse(JSON.stringify(obj));
+
+console.log(copy);
+
+Output:
+
+{
+  date: "2026-07-02T...",
+}
+
+Lost:
+
+Functions
+undefined
+Map
+Set
+Date (becomes a string)
+Circular references (throws an error)
+
+
+
+********************************************************************************************************************************************************************************************************************************
+
+
+IMPORTANT = this key word :
+
+this means the current object that is calling the Method
+

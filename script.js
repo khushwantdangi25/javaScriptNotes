@@ -456,9 +456,182 @@
 // const inp = document.querySelector("input");
 // console.log(inp.value);
 
-let obj = {
-  for:"kk",
-  let : 12,
+// let obj = {
+//   for:"kk",
+//   let : 12,
 
+// }
+// console.log(obj.let);
+
+
+// let user = {
+//       name : "jhon",
+//       address : {
+//             // city:{
+//             //       state:"rj",
+//             // }
+//       },
+//       date : 7
+// }
+// console.log(user.address.city?.state);
+// console.log("hello");
+
+// let s1 = Symbol();
+// let s2 = Symbol();
+// if(s1 == s2){
+
+//       console.log("true");
+      
+// }
+
+// let salary = Symbol("salary")
+// const employee  = {
+//          name : "Jhone",
+//          age  : 25,
+//          [salary]:50000,
+//       //    address : {
+//       //                   city : "UDZ",
+//       //              },
+
+//           }
+
+//       console.log(employee.address?.city);
+//       console.log(employee[salary]);
+//       console.log(Object.keys(employee));
+      
+
+//  let users = [
+//   {
+//     id: 1,
+//     name: "Khushwant",
+//     pic: "https://tse3.mm.bing.net/th/id/OIP.ElNoLNw9fjO3FCKrBNhMtwHaL5?rs=1&pid=ImgDetMain&o=7&rm=3",
+//     bio: "create yourself"
+//   },
+//   {
+//     id: 2,
+//     name: "Jay",
+//     pic: "https://th.bing.com/th/id/OIP.nbuopYKv4CTw1mGUMcgM7AHaLG?w=204&h=306&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+//     bio: "Money"
+//   },
+//   {
+//     id: 3,
+//     name: "Divya",
+//     pic: "https://th.bing.com/th/id/OIP.H3S-oQHMw9okOwSMHmb0jQHaLH?w=208&h=305&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+//     bio: "Self Obsessed"
+//   },
+//   {
+//     id: 4,
+//     name: "Tanu",
+//     pic: "https://th.bing.com/th/id/OIP.JAQW0ViuSEq9ZpX5f0EHYAHaLH?w=204&h=306&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+//     bio: "dancing world"
+//   },
+//   {
+//     id: 5,
+//     name: "Bhumi",
+//     pic: "https://th.bing.com/th/id/OIP.LC5QeewTlOYRlb0-6cg4vAHaNK?w=187&h=333&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+//     bio: "Make it"
+//   },
+//   {
+//     id: 6,
+//     name: "hitesh",
+//     pic: "https://th.bing.com/th/id/OIP.OCHyq87SpYxZPNWl8_UezQHaJh?w=208&h=268&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+//     bio: "urgent only"
+//   },
+//   {
+//     id: 7,
+//     name: "vikram",
+//     pic: "https://th.bing.com/th/id/OIP.MCdl_FWPF5UxbRw2coXOAQHaHa?w=208&h=208&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+//     bio: "anger issue"
+//   },
+//   {
+//     id: 8,
+//     name: "panda",
+//     pic: "https://th.bing.com/th/id/OIP.Qbrperu0V-aDLxC2COE-ewHaHa?w=208&h=194&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+//     bio: "sleep sleep"
+//   },
+//   {
+//     id: 9,
+//     name: "p2",
+//     pic: "https://th.bing.com/th/id/OIP.DJ0LOso38n8jle_UVSw9cgHaLH?w=204&h=306&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+//     bio: "love panda"
+//   },
+//   {
+//     id: 10,
+//     name: "p3",
+//     pic: "https://th.bing.com/th/id/OIP.NQIMyGFg_zvCX1u_Jj1rHgHaLG?w=204&h=305&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+//     bio: "love panda"
+//   },
+//   {
+//     id: 11,
+//     name: "Dhruvi",
+//     pic: "https://th.bing.com/th/id/OIP.HxlOVJJLTcmV63taXN-blwHaLH?w=204&h=306&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+//     bio: "love hitesh"
+//   }
+// ];
+
+// for (let i = 0; i < users.length; i++) {
+//     for (let a in users[i]) {
+//         console.log(`${a} : ${users[i].a.id}`);
+//     }
+// }
+
+// *******************************************************************************************************************************************************
+
+
+//  Shallow copy Deep copy
+
+
+// let obj = {
+//   name:"k",
+//   d : 1
+// }
+// let b = {...obj , k:2};
+// console.log(b);
+
+let ob = {
+  name : "khushwant",
+  age : 22,
+  address : function(){
+    () =>{
+    console.log(this.name);
+    
+  }
 }
-console.log(obj.let);
+  
+}
+
+// Shallow-copy
+// let obc = ob;
+
+// obc.address.city.place = "Nathdwara"
+// console.log(obc.address.city.place);
+// console.log(ob.address.city.place);
+console.log(ob.address()());
+
+
+
+
+// Deep-copy
+// let obcd = structuredClone(ob);
+// obcd.address.city.place = "Bhilwara";
+
+// console.log(obc.address.city.place);
+// console.log(ob.address.city.place);
+// console.log(obcd.address.city.place);
+
+// // Array deep shallow copy 
+
+// let ar = [1,2,3,4,55];
+// let br = [...ar];
+// br.push(30);
+// console.log(ar);
+// console.log(br);
+
+// let arr = [[1,2],[3,4],[45 , 0]];
+// let brr = [...arr];
+
+// brr[0][0] = 45
+
+// console.log(arr);
+// console.log(brr);
+

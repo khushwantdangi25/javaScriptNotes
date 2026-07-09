@@ -1,0 +1,16 @@
+Optional Chaining (?.)  :-  is used to safely access properties or methods of an object.
+                            It prevents your program from crashing when a property does not exist.
+
+
+                            let user = {
+                             name : "jhon",
+                             address : {
+                                   // city:{
+                                  //       state:"rj",
+                                  // }
+                             },
+                             date : 7
+                       }
+                       console.log(user.address.city?.state);
+                       console.log("hello");
+
