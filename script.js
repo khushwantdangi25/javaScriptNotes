@@ -210,7 +210,6 @@
 // validation(101, 2, mul);
 // validation(14, 1, div);
 
-
 // function greet( name , callback){
 //  console.log(`good morning ${name} ${callback(name)}`);
 // }
@@ -219,7 +218,7 @@
 // }
 // function welcome(name){
 //      return `welcome ${name}`
-     
+
 // }
 // greet("khush" , by);
 // greet("khush" , welcome);
@@ -227,7 +226,7 @@
 // let arr = [1,3,5,6,67];
 // let b = arr.map(e => e*2);
 // console.log(b);
-// let brr = [{name : 'k' , id : 1} 
+// let brr = [{name : 'k' , id : 1}
 //      , {name:'b', id : 3},
 //      {name : 'c', id : 3}
 // ];
@@ -250,10 +249,9 @@
 
 // function j(a, ...b) {
 //   console.log(a , b);
-  
+
 // }
 // j(1,2,3,4,5,5,);
-
 
 // const orders = [
 //   {
@@ -313,7 +311,7 @@
 //   console.log(u.customer);
 // })
 
-// //filter the array  whose food is delivered 
+// //filter the array  whose food is delivered
 
 // const red = orders.filter((val) =>{
 //   if(val. delivered){
@@ -323,7 +321,6 @@
 // })
 // console.log(red);
 
-
 // // count the number of orders delivered
 
 // const pen = orders.reduce((count , order) =>{
@@ -332,7 +329,6 @@
 
 // console.log(pen);
 
-
 // const arr = [1,2,3,5,6,8];
 //  const brr = arr.filter((u) =>{
 //   if(u % 2 != 0){
@@ -340,7 +336,6 @@
 //   }
 // })
 // console.log(brr);
-
 
 // const crr = orders.reduce((total , pr) =>{
 //   return total += pr.price;
@@ -358,7 +353,7 @@
 
 // res3.map((u) => {
 //     console.log();
-    
+
 //     console.log(u.price);
 // })
 // console.log(res3);
@@ -369,7 +364,7 @@
 //   console.log(i);
 //   print(n-1);
 //   i++;
-  
+
 // }
 // print(10 , 1);
 
@@ -386,15 +381,13 @@
 // let s = input("khushwant" , 32);
 // console.log(s);
 
+// let s = {
+//   "full name" : "khush",
+//   id : 12,
+// }
 
-      // let s = {
-      //   "full name" : "khush",
-      //   id : 12,
-      // }
-
-      // // consol.log(s.full name)// error
-      // console.log(s["full name"]) // khush
-
+// // consol.log(s.full name)// error
+// console.log(s["full name"]) // khush
 
 // let s = {
 //     name : "k",
@@ -404,7 +397,6 @@
 // s["k"] = "kk";
 // console.log(s); //{ name: 'k', id: 12, address: 'limbda', k: 'kk' }
 
-
 // let s = {
 //     n : "k",
 //     age : 12,
@@ -412,7 +404,7 @@
 // }
 // console.log(s);
 
-// delete s.age 
+// delete s.age
 // console.log(s);
 
 // const car = {
@@ -432,12 +424,10 @@
 // // access using bracket [];
 
 // console.log(car["name"]);
-//  // dynamic value 
+//  // dynamic value
 
 //  let k = "company";
 //  console.log(car[k]);
- 
-
 
 // let arr = [];
 // function input(obj){
@@ -450,7 +440,7 @@
 // input({name : "o"});
 // arr.map((u) =>{
 //  console.log(u.name);
- 
+
 // })
 
 // const inp = document.querySelector("input");
@@ -462,7 +452,6 @@
 
 // }
 // console.log(obj.let);
-
 
 // let user = {
 //       name : "jhon",
@@ -481,7 +470,7 @@
 // if(s1 == s2){
 
 //       console.log("true");
-      
+
 // }
 
 // let salary = Symbol("salary")
@@ -498,7 +487,6 @@
 //       console.log(employee.address?.city);
 //       console.log(employee[salary]);
 //       console.log(Object.keys(employee));
-      
 
 //  let users = [
 //   {
@@ -577,9 +565,7 @@
 
 // *******************************************************************************************************************************************************
 
-
 //  Shallow copy Deep copy
-
 
 // let obj = {
 //   name:"k",
@@ -588,28 +574,25 @@
 // let b = {...obj , k:2};
 // console.log(b);
 
-let ob = {
-  name : "khushwant",
-  age : 22,
-  address : function(){
-    () =>{
-    console.log(this.name);
-    
-  }
-}
-  
-}
+// let ob = {
+//   name : "khushwant",
+//   age : 22,
+//   address : function(){
+//     () =>{
+//     console.log(this.name);
+
+//   }
+// }
+
+// }
 
 // Shallow-copy
 // let obc = ob;
 
 // obc.address.city.place = "Nathdwara"
 // console.log(obc.address.city.place);
-// console.log(ob.address.city.place);
-console.log(ob.address()());
-
-
-
+/// console.log(ob.address.city.place);
+// console.log(ob.address()());
 
 // Deep-copy
 // let obcd = structuredClone(ob);
@@ -619,7 +602,7 @@ console.log(ob.address()());
 // console.log(ob.address.city.place);
 // console.log(obcd.address.city.place);
 
-// // Array deep shallow copy 
+// // Array deep shallow copy
 
 // let ar = [1,2,3,4,55];
 // let br = [...ar];
@@ -635,3 +618,160 @@ console.log(ob.address()());
 // console.log(arr);
 // console.log(brr);
 
+// ****************************************************************************************************************************************************************************
+
+// Q1. Reference Copy (=)
+// ----------------------
+// Create an object student1 with:
+// - name
+// - age
+
+// Assign it to student2 using (=).
+
+// Tasks:
+// 1. Change student2.name.
+// 2. Print both objects.
+// 3. Explain why both objects changed.
+
+// let student1 = {
+//     name : "kkhuswant",
+//     age : 20
+// }
+
+// let student2 = student1;
+
+// student2.name = "kunal"
+// console.log(student1);
+// console.log(student2);
+
+// Q2. Shallow Copy
+// ----------------
+// Create an object employee with:
+// - name
+// - department
+
+// Tasks:
+// 1. Create a shallow copy using the spread operator (...).
+// 2. Change the department in the copied object.
+// 3. Print both objects.
+// 4. Explain why the original object did or did not change.
+
+let emp = {
+  name: "sourav",
+  department: "IT",
+};
+
+let emp2 = { ...emp };
+emp2.department = "Accounts";
+// console.log(emp2);
+// console.log(emp);
+
+// Q3. Shallow Copy with Nested Object
+// -----------------------------------
+// Create an object user with:
+// - name
+// - address
+//     - city
+//     - pincode
+
+// Tasks:
+// 1. Create a shallow copy using the spread operator.
+// 2. Change address.city in the copied object.
+// 3. Print both objects.
+// 4. Explain why both objects show the same city.
+
+let city1 = {
+  name: "khushwant",
+  age: 22,
+  address: {
+    city: "Udaipur",
+  },
+};
+let city2 = { ...city1 };
+
+city2.address.city = "bhilwara";
+// console.log(city1);
+// console.log(city2);
+
+// Q4. Deep Copy
+// -------------
+// Using the same user object:
+
+// Tasks:
+// 1. Create a deep copy using structuredClone().
+// 2. Change address.pincode in the copied object.
+// 3. Print both objects.
+// 4. Explain why the original object did not change.
+
+let user = {
+  name: "Jay",
+  age: 20,
+  address: {
+    city: "Rajasthan",
+  },
+};
+
+let user2 = structuredClone(user);
+
+user2.address.city = "Udaipur";
+user2.name = "kunal";
+// console.log(user);
+// console.log(user2);
+
+// Q5. Bank Account
+// ----------------
+// Create an object with:
+// - accountHolder
+// - balance
+
+// Create methods:
+// 1. deposit(amount)
+// 2. withdraw(amount)
+
+// Requirements:
+// - Update balance using this.balance.
+// - Print balance after every transaction.
+
+// let Bank = {
+//   accountHolder: "Sudhir",
+//   balance: 1000,
+
+//   deposit: function (val) {
+//     console.log("before deposite : " + this.balance);
+
+//     this.balance += val;
+
+//     console.log("current balance : " + this.balance);
+//   },
+
+//   withdraw: function (val) {
+//     if (this.balance >= val) {
+//       console.log("withdrawl success");
+//       this.balance -= val;
+//       console.log("remaning balance : " + this.balance);
+//     } else {
+//       console.error("Insufficient Balance");
+//     }
+//   },
+
+
+//   checkBalance: function () {
+//     console.log("current balance :  " + this.balance);
+//   },
+// };
+
+// // Bank.deposit(100);
+// // console.log();
+// // Bank.withdraw(1200);
+// // console.log();
+// // console.log(Bank.accountHolder);
+// // console.log();
+// Bank.checkBalance();
+
+//  ramBolo();
+// function ramBolo(){
+//   console.log("Ram");
+  
+// }
+//  string method : startswith , endswith trimstart , trimends , padstart , padendt 
+  // number pricision in float and int 

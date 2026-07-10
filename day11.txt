@@ -234,6 +234,8 @@ console.log(arr);
 2. Deep Copy
 
 A deep copy creates a completely independent copy of the object, including all nested objects and arrays.
+Deep copy is recursive in nature
+
 
 Example
 const person = {
