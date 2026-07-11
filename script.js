@@ -775,3 +775,19 @@ user2.name = "kunal";
 // }
 //  string method : startswith , endswith trimstart , trimends , padstart , padendt 
   // number pricision in float and int 
+
+
+  let u = {
+    name : "khushwant",
+      fun : function(day){
+      console.log("today is : "+day);
+      console.log("good morning  "+this.name);
+    },
+  }
+  let u2 = {
+    name:"kunal",
+  }
+  u.fun.call(u2,"tuesday");
+
+  let f2 = u.fun.bind(u2);
+  f2("ll")
