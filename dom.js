@@ -1,8 +1,10 @@
- const button = document.getElementById("devBtn");
-        const message = document.getElementById("message");
+ const b1 = document.querySelector(".card");
 
-        button.addEventListener("click", function () {
-            message.textContent = "🚀 Welcome! I build responsive and interactive websites using HTML, CSS, JavaScript, React, and Java.";
-            button.textContent = "✅ Thanks for Visiting!";
-            button.style.backgroundColor = "green";
-        });
+ b1.innerHTML = `<h1> hello </h1>
+                <h2> Name = Khushwant </h2>
+                <h3> batch = 7</h3>
+                ` 
+
+ 
+ console.log(b1);
+ 

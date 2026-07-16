@@ -7,18 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="card">
-    <div class="main">
-    <div class="mig">
-        <img src="https://tse1.mm.bing.net/th/id/OIP.vMaoffNEB01khY3jvQ_IjwHaFM?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+    <div class="card">
+      <button >click me</button>
     </div>
-    <h3>Name</h3>
-    </div>
-</div>
-  
+    <script>
+       const b  = document.querySelector(".card");
+       const c = document.querySelector("button");
 
-    <script src = "dom.js">
-       
+    c.addEventListener( "click", function(e){
+        console.log(e.key);
+         b.style.backgroundColor = "yellow";
+        
+    })  
+    c.addEventListener( "dblclick", function(e){
+        console.log(e.key);
+         b.style.backgroundColor = "black";
+        
+    })  
     </script>
 
 </body>
